@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F226630A194E372700817388 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2266309194E372700817388 /* Post.swift */; };
+		F226630C194E394D00817388 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226630B194E394D00817388 /* PostTableViewCell.swift */; };
+		F226630E194E3ECB00817388 /* EditPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226630D194E3ECB00817388 /* EditPostViewController.swift */; };
+		F22DFCBC194E74EE00DE7C05 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22DFCBB194E74EE00DE7C05 /* PostsViewController.swift */; };
 		F26338EC194E1EB80032BAAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26338EB194E1EB80032BAAB /* AppDelegate.swift */; };
-		F26338EE194E1EB80032BAAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26338ED194E1EB80032BAAB /* ViewController.swift */; };
 		F26338F1194E1EB80032BAAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F26338EF194E1EB80032BAAB /* Main.storyboard */; };
 		F26338F3194E1EB80032BAAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F26338F2194E1EB80032BAAB /* Images.xcassets */; };
 		F26338FF194E1EB80032BAAB /* BlogRedoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26338FE194E1EB80032BAAB /* BlogRedoTests.swift */; };
+		F2F435BD194F2FDF0058AD8E /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F435BC194F2FDF0058AD8E /* CreatePostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F2266309194E372700817388 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		F226630B194E394D00817388 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = ../PostTableViewCell.swift; sourceTree = "<group>"; };
+		F226630D194E3ECB00817388 /* EditPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPostViewController.swift; sourceTree = "<group>"; };
+		F22DFCBB194E74EE00DE7C05 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		F26338E6194E1EB80032BAAB /* BlogRedo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogRedo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26338EA194E1EB80032BAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26338EB194E1EB80032BAAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F26338ED194E1EB80032BAAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F26338F0194E1EB80032BAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F26338F2194E1EB80032BAAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F26338F8194E1EB80032BAAB /* BlogRedoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlogRedoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26338FD194E1EB80032BAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F26338FE194E1EB80032BAAB /* BlogRedoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogRedoTests.swift; sourceTree = "<group>"; };
+		F2F435BC194F2FDF0058AD8E /* CreatePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +83,13 @@
 		F26338E8194E1EB80032BAAB /* BlogRedo */ = {
 			isa = PBXGroup;
 			children = (
-				F26338EB194E1EB80032BAAB /* AppDelegate.swift */,
-				F26338ED194E1EB80032BAAB /* ViewController.swift */,
+				F2266309194E372700817388 /* Post.swift */,
+				F226630B194E394D00817388 /* PostTableViewCell.swift */,
 				F26338EF194E1EB80032BAAB /* Main.storyboard */,
+				F22DFCBB194E74EE00DE7C05 /* PostsViewController.swift */,
+				F2F435BC194F2FDF0058AD8E /* CreatePostViewController.swift */,
+				F226630D194E3ECB00817388 /* EditPostViewController.swift */,
+				F26338EB194E1EB80032BAAB /* AppDelegate.swift */,
 				F26338F2194E1EB80032BAAB /* Images.xcassets */,
 				F26338E9194E1EB80032BAAB /* Supporting Files */,
 			);
@@ -208,8 +220,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F26338EE194E1EB80032BAAB /* ViewController.swift in Sources */,
+				F22DFCBC194E74EE00DE7C05 /* PostsViewController.swift in Sources */,
+				F226630A194E372700817388 /* Post.swift in Sources */,
 				F26338EC194E1EB80032BAAB /* AppDelegate.swift in Sources */,
+				F226630E194E3ECB00817388 /* EditPostViewController.swift in Sources */,
+				F2F435BD194F2FDF0058AD8E /* CreatePostViewController.swift in Sources */,
+				F226630C194E394D00817388 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +413,7 @@
 				F2633904194E1EB80032BAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2633905194E1EB80032BAAB /* Build configuration list for PBXNativeTarget "BlogRedoTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +422,7 @@
 				F2633907194E1EB80032BAAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
