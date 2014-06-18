@@ -39,7 +39,7 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         cell.titleLabel.text = post.title
         cell.userNameLabel.text = post.userName
-//        cell.timeStampLabel.text = post.timeStamp
+        cell.timeStampLabel.text =  post.timeStamp
         cell.contentLabel.text = post.content
         
 //        println(cell.titleLabel.text)

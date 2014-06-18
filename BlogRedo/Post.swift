@@ -12,44 +12,45 @@ class Post: NSObject {
     
     var title : String?
     var userName : String?
-    var timeStamp : NSDate?
+    var timeStamp : String?
     var content : String?
     
-//    let timeStamp = NSDate()
-//    let dateFormatter = NSDateFormatter()
-//    dateFormatter.timeStyle = .ShortStyle
-//    formatter.stringFromDate(date)
-//    
-//    println(timestamp)
-    
-//    var post = Post()
+    func stringFromDate() -> String {
         
-    func setPost(title: String, userName: String, timeStamp: NSDate, content: String) -> Post {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .MediumStyle
+        dateFormatter.timeStyle = .ShortStyle
+        var date = dateFormatter.stringFromDate(NSDate())
+
+        return date
+    }
+    
+    func setPost(t: String, u: String, time: String, c: String) -> Post {
+        
         var post = Post()
-        post.title = title
-        post.userName = userName
-        post.timeStamp = timeStamp
-        post.content = content
+        post.title = t
+        post.userName = u
+        post.timeStamp = time
+        post.content = c
         
         return post
     }
     
     func setPosts() -> Post[] {
         var posts = Post[]()
-        var post1 = setPost("Title of First Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post2 = setPost("Title of Second Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post3 = setPost("Title of Third Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post4 = setPost("Title of Fourth Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post5 = setPost("Title of Fifth Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post6 = setPost("Title of Sixth Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post7 = setPost("Title of Seventh Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post8 = setPost("Title of Eighth Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post9 = setPost("Title of Ninth Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
-        var post10 = setPost("Title of Tenth Post", userName: "Michael Tirenin", timeStamp: NSDate(), content: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post1 = setPost("Title of First Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post2 = setPost("Title of Second Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post3 = setPost("Title of Third Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post4 = setPost("Title of Fourth Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post5 = setPost("Title of Fifth Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post6 = setPost("Title of Sixth Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post7 = setPost("Title of Seventh Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post8 = setPost("Title of Eighth Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post9 = setPost("Title of Ninth Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipsum dolor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
+        var post10 = setPost("Title of Tenth Post", u: "Michael Tirenin", time: stringFromDate(), c: "Lorem ipcor sit amet, ut pular vel mattis, ad nec velit etiam felis volutpat, magna orci, tellus aliquet in sed aliquam massa sodales.")
         
         posts = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10]
-        
-//        println(posts)
+
         return posts
     }
 }
