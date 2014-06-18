@@ -41,8 +41,21 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.userNameLabel.text = post.userName
         cell.timeStampLabel.text =  post.timeStamp
         cell.contentLabel.text = post.content
+        cell.pictureImageView.image = post.picture
         
-//        println(cell.titleLabel.text)
+        cell.titleLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+
+        cell.userNameLabel.font = UIFont(name: "TrebuchetMS-Italic", size: 11)
+        cell.userNameLabel.textColor = UIColor(red: 80.0/255.0, green: 80.0/255.0, blue: 80.0/255.0, alpha: 1.0)
+
+        cell.timeStampLabel.font = UIFont(name: "TrebuchetMS-Italic", size: 11)
+        cell.timeStampLabel.textColor = UIColor(red: 150.0/255.0, green: 150.0/255.0, blue: 150.0/255.0, alpha: 1.0)
+
+        cell.contentLabel.font = UIFont(name: "TrebuchetMS", size: 12.5)
+        
+        cell.pictureImageView.layer.cornerRadius = cell.pictureImageView.frame.size.width / 2.0
+        cell.pictureImageView.clipsToBounds = true
+
         return cell
     }
     

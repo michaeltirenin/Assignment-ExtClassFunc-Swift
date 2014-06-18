@@ -18,7 +18,7 @@ class EditPostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationItem.title = "Edit & Share Post"
     }
 
     override func didReceiveMemoryWarning() {

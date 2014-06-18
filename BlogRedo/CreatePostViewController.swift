@@ -25,7 +25,7 @@ class CreatePostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "New Post"
+        navigationItem.title = "Create New Post"
 
     }
 
