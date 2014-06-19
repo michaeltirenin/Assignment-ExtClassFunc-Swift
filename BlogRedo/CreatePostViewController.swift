@@ -8,19 +8,30 @@
 
 import UIKit
 
+protocol CreatePostViewControllerDelegate {
+//    func
+}
+
 class CreatePostViewController: UIViewController {
+    
+    var createPostDelegate : CreatePostViewControllerDelegate?
 
     @IBOutlet var userNameTextField : UITextField
     @IBOutlet var titleTextField : UITextField
     @IBOutlet var contentTextField : UITextField
+    @IBOutlet var createPictureImageView: UIImageView
     
-    @IBOutlet var saveNewPostButton : UIBarButtonItem
-    @IBOutlet var cancelNewPostButton : UIBarButtonItem
-    
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Custom initialization
+    @IBAction func cancelNewPostButton(sender: UIBarButtonItem) {
+        
     }
+    
+    @IBAction func saveNewPostButton(sender: UIBarButtonItem) {
+        
+    }
+
+//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

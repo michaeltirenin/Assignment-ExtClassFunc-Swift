@@ -8,24 +8,56 @@
 
 import UIKit
 
-class EditPostViewController: UIViewController {
+protocol EditPostViewControllerDelegate {
+//    func
+}
 
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // Custom initialization
+class EditPostViewController: UIViewController {
+    
+    var editPostDelegate : EditPostViewControllerDelegate?
+    
+    var post : Post?
+    
+    @IBOutlet var editUserNameTextField: UITextField
+    @IBOutlet var editTitleTextField: UITextField
+    @IBOutlet var editContentTextField: UITextField
+    @IBOutlet var editPictureImageView: UIImageView
+    
+    @IBAction func cancelEditPostButton(sender: UIBarButtonItem) {
+        
     }
+    
+    @IBAction func saveEditPostButton(sender: UIBarButtonItem) {
+        
+    }
+    
+//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Edit & Share Post"
+        
+        editUserNameTextField.text = self.post?.userName
+        editTitleTextField.text = self.post?.title
+        editContentTextField.text = self.post?.content
+        editPictureImageView.image = self.post?.picture
+        
+//        editUserNameTextField.delegate =
+//        editTitleTextField.delegate =
+//        editContentTextField.delegate =
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
+//    override func viewWillAppear(animated: Bool) {
+//        [super.viewWillAppear(animated)]
+//    }
+
 
     /*
     // #pragma mark - Navigation

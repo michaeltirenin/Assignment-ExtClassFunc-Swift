@@ -107,10 +107,10 @@
 				F226630B194E394D00817388 /* PostTableViewCell.swift */,
 				F26338EF194E1EB80032BAAB /* Main.storyboard */,
 				F22DFCBB194E74EE00DE7C05 /* PostsViewController.swift */,
-				F2F435BC194F2FDF0058AD8E /* CreatePostViewController.swift */,
 				F226630D194E3ECB00817388 /* EditPostViewController.swift */,
-				F26338EB194E1EB80032BAAB /* AppDelegate.swift */,
+				F2F435BC194F2FDF0058AD8E /* CreatePostViewController.swift */,
 				F2C631531952085700B9FE1E /* images */,
+				F26338EB194E1EB80032BAAB /* AppDelegate.swift */,
 				F26338F2194E1EB80032BAAB /* Images.xcassets */,
 				F26338E9194E1EB80032BAAB /* Supporting Files */,
 			);

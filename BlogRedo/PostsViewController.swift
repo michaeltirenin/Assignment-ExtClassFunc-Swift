@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class PostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, EditPostViewControllerDelegate, CreatePostViewControllerDelegate {
     
     @IBOutlet var postsTableView : UITableView
-
-    @IBOutlet var createNewPostButton : UIBarButtonItem
+    
+    @IBAction func createNewPostButton(sender: UIBarButtonItem) {
+        
+    }
     
     var posts = Post().setPosts()
 
@@ -55,6 +57,8 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         cell.pictureImageView.layer.cornerRadius = cell.pictureImageView.frame.size.width / 2.0
         cell.pictureImageView.clipsToBounds = true
+        
+        navigationItem.leftBarButtonItem = editButtonItem()
 
         return cell
     }
@@ -73,7 +77,7 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
 //    createPostVC.createPostDelegate = self;
 //    }
 
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        let editPostViewController: EditPostViewController = segue.destinationViewController as EditPostViewController
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        let editPostViewController: EditPostViewController = segue.destinationViewController as EditPostViewController
+//    }
 }
