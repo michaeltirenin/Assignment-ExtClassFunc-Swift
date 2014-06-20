@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="119" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="a2F-xr-MsH">
@@ -27,60 +27,37 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isM-U4-akT">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isM-U4-akT">
                                                     <rect key="frame" x="119" y="10.5" width="172" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzq-wW-I4D">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="userName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qzq-wW-I4D">
                                                     <rect key="frame" x="119" y="31" width="69" height="17"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="17" id="6F8-Ug-bwh"/>
-                                                        <constraint firstAttribute="width" constant="69" id="o1l-6Z-iHK"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Italic" family="Trebuchet MS" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timeStamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8T-tk-S37">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="timeStamp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8T-tk-S37">
                                                     <rect key="frame" x="191" y="31" width="100" height="17"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS-Italic" family="Trebuchet MS" pointSize="12"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="xK6-RW-a4Z">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Content" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="172" translatesAutoresizingMaskIntoConstraints="NO" id="xK6-RW-a4Z">
                                                     <rect key="frame" x="119" y="47" width="172" height="68"/>
                                                     <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-FA-A6D">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqc-FA-A6D">
                                                     <rect key="frame" x="10" y="10.5" width="96" height="98.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="96" id="WW1-3g-UaP"/>
-                                                    </constraints>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="10" y="10" width="96" height="98.5"/>
+                                                    </variation>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="A8T-tk-S37" firstAttribute="leading" secondItem="Qzq-wW-I4D" secondAttribute="trailing" constant="3" id="0Cp-cg-0rD"/>
-                                                <constraint firstItem="kqc-FA-A6D" firstAttribute="leading" secondItem="aUB-Ok-w52" secondAttribute="leading" constant="10" id="0z3-x7-vVb"/>
-                                                <constraint firstAttribute="trailing" secondItem="isM-U4-akT" secondAttribute="trailing" constant="3" id="7Mi-YQ-tTz"/>
-                                                <constraint firstItem="kqc-FA-A6D" firstAttribute="centerY" secondItem="aUB-Ok-w52" secondAttribute="centerY" id="85D-hE-Uod"/>
-                                                <constraint firstItem="kqc-FA-A6D" firstAttribute="top" secondItem="aUB-Ok-w52" secondAttribute="top" constant="10" id="Bcb-Mx-29g"/>
-                                                <constraint firstItem="A8T-tk-S37" firstAttribute="trailing" secondItem="isM-U4-akT" secondAttribute="trailing" id="Byv-OS-2PK"/>
-                                                <constraint firstAttribute="bottom" secondItem="Qzq-wW-I4D" secondAttribute="bottom" constant="71.5" id="T4p-Zu-fJg"/>
-                                                <constraint firstItem="Qzq-wW-I4D" firstAttribute="top" secondItem="isM-U4-akT" secondAttribute="bottom" constant="1" id="TY1-2y-jPS"/>
-                                                <constraint firstItem="xK6-RW-a4Z" firstAttribute="trailing" secondItem="A8T-tk-S37" secondAttribute="trailing" id="ZvD-26-epl"/>
-                                                <constraint firstItem="xK6-RW-a4Z" firstAttribute="leading" secondItem="Qzq-wW-I4D" secondAttribute="leading" id="bVR-O6-dOm"/>
-                                                <constraint firstItem="isM-U4-akT" firstAttribute="leading" secondItem="kqc-FA-A6D" secondAttribute="trailing" constant="13" id="boy-1H-Ta1"/>
-                                                <constraint firstItem="Qzq-wW-I4D" firstAttribute="baseline" secondItem="A8T-tk-S37" secondAttribute="baseline" id="dpc-14-vtD"/>
-                                                <constraint firstItem="Qzq-wW-I4D" firstAttribute="leading" secondItem="isM-U4-akT" secondAttribute="leading" id="kSc-oD-jPi"/>
-                                                <constraint firstItem="A8T-tk-S37" firstAttribute="top" secondItem="Qzq-wW-I4D" secondAttribute="top" id="loC-Ya-2XS"/>
-                                                <constraint firstAttribute="bottom" secondItem="xK6-RW-a4Z" secondAttribute="bottom" constant="4.5" id="plJ-G0-cdd"/>
-                                                <constraint firstItem="xK6-RW-a4Z" firstAttribute="top" secondItem="isM-U4-akT" secondAttribute="bottom" constant="17" id="tLS-Ga-RT5"/>
-                                                <constraint firstItem="kqc-FA-A6D" firstAttribute="top" secondItem="isM-U4-akT" secondAttribute="top" id="y35-Qt-6jA"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="xK6-RW-a4Z" id="Wnr-Qw-gxc"/>
@@ -130,23 +107,32 @@
                         <viewControllerLayoutGuide type="bottom" id="emJ-YM-LjZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a2f-Zh-gXz">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-cc-fA1">
                                 <rect key="frame" x="20" y="100" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sUI-IA-98X" id="pYb-9o-fHL"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42D-uC-Mtb">
                                 <rect key="frame" x="20" y="145" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sUI-IA-98X" id="YUz-Hj-bVk"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Content" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKD-9b-qv4">
                                 <rect key="frame" x="20" y="190" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="sUI-IA-98X" id="XYI-Xz-yLa"/>
+                                </connections>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-fI-efK">
                                 <rect key="frame" x="0.0" y="436" width="320" height="44"/>
@@ -193,7 +179,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4kl-ih-eTX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A0S-ar-VVb">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBu-yr-paF">
@@ -208,16 +194,25 @@
                                 <rect key="frame" x="20" y="100" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WKT-4U-Zm4" id="kQW-2Y-XZR"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZlV-Lg-3Ym">
                                 <rect key="frame" x="20" y="145" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WKT-4U-Zm4" id="2kM-YQ-THc"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Content" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmK-zm-A2t">
                                 <rect key="frame" x="20" y="190" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="WKT-4U-Zm4" id="QMG-6w-neU"/>
+                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbt-Je-5MW">
                                 <rect key="frame" x="68" y="237" width="184" height="184"/>

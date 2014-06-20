@@ -14,7 +14,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet var userNameLabel : UILabel
     @IBOutlet var timeStampLabel : UILabel
     @IBOutlet var contentLabel : UILabel
-    @IBOutlet var pictureImageView: UIImageView
+    @IBOutlet var pictureImageView : UIImageView
 
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

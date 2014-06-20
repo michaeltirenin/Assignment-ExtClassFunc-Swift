@@ -29,16 +29,15 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-//        println(posts.count)
         return posts.count
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("PostCell") as PostTableViewCell
+        let cell: PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as PostTableViewCell
 
         var post = posts[indexPath.row]
-        
+                
         cell.titleLabel.text = post.title
         cell.userNameLabel.text = post.userName
         cell.timeStampLabel.text =  post.timeStamp
@@ -63,21 +62,28 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-//    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//    {
-//    if ([segue.identifier isEqualToString:@"EditSegue"]) {
-//    MTEditPostViewController *editPostVC = segue.destinationViewController;
-//    editPostVC.editPostDelegate = self;
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    MTPost *post = [self.posts objectAtIndex:indexPath.row];
-//    editPostVC.post = post;
-//    }
-//    if ([segue.identifier isEqualToString:@"PublishSegue"]) {
-//    MTCreatePostViewController *createPostVC = segue.destinationViewController;
-//    createPostVC.createPostDelegate = self;
-//    }
-
-//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//        let editPostViewController: EditPostViewController = segue.destinationViewController as EditPostViewController
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        postsTableView.reloadData()
+    }
+        
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "CreatePostSegue" {
+            let createPostVC : CreatePostViewController = segue.destinationViewController as CreatePostViewController
+            createPostVC.createPostDelegate = self
+            
+        } else if segue.identifier == "EditPostSegue" {
+            let editPostVC : EditPostViewController = segue.destinationViewController as EditPostViewController
+            editPostVC.editPostDelegate = self
+            var indexPath : NSIndexPath = postsTableView.indexPathForSelectedRow()
+            var post : Post = posts[indexPath.row]
+            editPostVC.post = post
+        }
+    }
+    
+//    func updateTable() {
+//        postsTableView.reloadData()
 //    }
 }
+
+

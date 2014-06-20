@@ -12,17 +12,17 @@ protocol CreatePostViewControllerDelegate {
 //    func
 }
 
-class CreatePostViewController: UIViewController {
+class CreatePostViewController: UIViewController, UITextFieldDelegate {
     
-    var createPostDelegate : CreatePostViewControllerDelegate?
+    var createPostDelegate : CreatePostViewControllerDelegate? = nil
 
     @IBOutlet var userNameTextField : UITextField
     @IBOutlet var titleTextField : UITextField
     @IBOutlet var contentTextField : UITextField
-    @IBOutlet var createPictureImageView: UIImageView
+    @IBOutlet var createPictureImageView : UIImageView
     
     @IBAction func cancelNewPostButton(sender: UIBarButtonItem) {
-        
+        navigationController.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func saveNewPostButton(sender: UIBarButtonItem) {
@@ -45,6 +45,11 @@ class CreatePostViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // UITextFieldDelegate
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
     /*
     // #pragma mark - Navigation

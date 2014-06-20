@@ -9,26 +9,37 @@
 import UIKit
 
 protocol EditPostViewControllerDelegate {
-//    func
+//    func updateTable()
 }
 
-class EditPostViewController: UIViewController {
+class EditPostViewController: UIViewController, UITextFieldDelegate {
     
-    var editPostDelegate : EditPostViewControllerDelegate?
+    var editPostDelegate : EditPostViewControllerDelegate? = nil
+
+//    init(delegate: EditPostViewControllerDelegate?) {
+//        self.editPostDelegate = delegate
+//    }
+
+    var post = Post()
+    var newTimeStamp = Post().stringFromDate()
     
-    var post : Post?
-    
-    @IBOutlet var editUserNameTextField: UITextField
-    @IBOutlet var editTitleTextField: UITextField
-    @IBOutlet var editContentTextField: UITextField
-    @IBOutlet var editPictureImageView: UIImageView
+    @IBOutlet var editUserNameTextField : UITextField
+    @IBOutlet var editTitleTextField : UITextField
+    @IBOutlet var editContentTextField : UITextField
+    @IBOutlet var editPictureImageView : UIImageView
     
     @IBAction func cancelEditPostButton(sender: UIBarButtonItem) {
-        
+        navigationController.popToRootViewControllerAnimated(true)
     }
     
     @IBAction func saveEditPostButton(sender: UIBarButtonItem) {
+        post.userName = editUserNameTextField.text
+        post.title = editTitleTextField.text
+        post.content = editContentTextField.text
+        post.picture = editPictureImageView.image
+        post.timeStamp = newTimeStamp // sets new time/date for post
         
+        navigationController.popToRootViewControllerAnimated(true)
     }
     
 //    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -39,23 +50,32 @@ class EditPostViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "Edit & Share Post"
+
+        editUserNameTextField.text = post.userName
+        editTitleTextField.text = post.title
+        editContentTextField.text = post.content
+        editPictureImageView.image = post.picture
+
+//        editUserNameTextField.delegate = self
+//        editTitleTextField.delegate = self
+//        editContentTextField.delegate = self
         
-        editUserNameTextField.text = self.post?.userName
-        editTitleTextField.text = self.post?.title
-        editContentTextField.text = self.post?.content
-        editPictureImageView.image = self.post?.picture
-        
-//        editUserNameTextField.delegate =
-//        editTitleTextField.delegate =
-//        editContentTextField.delegate =
+        editPictureImageView.layer.cornerRadius = editPictureImageView.frame.size.width / 2.0
+        editPictureImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    // UITextFieldDelegate; also, note: link delegate for each textfield in storyboard
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
 //    override func viewWillAppear(animated: Bool) {
-//        [super.viewWillAppear(animated)]
+//        super.viewWillAppear(animated)
 //    }
 
 
