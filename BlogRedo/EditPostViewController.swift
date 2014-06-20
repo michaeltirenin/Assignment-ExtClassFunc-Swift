@@ -9,7 +9,7 @@
 import UIKit
 
 protocol EditPostViewControllerDelegate {
-//    func updateTable()
+//    func updateTable() // not necessary
 }
 
 class EditPostViewController: UIViewController, UITextFieldDelegate {
@@ -38,14 +38,12 @@ class EditPostViewController: UIViewController, UITextFieldDelegate {
         post.content = editContentTextField.text
         post.picture = editPictureImageView.image
         post.timeStamp = newTimeStamp // sets new time/date for post
+
+        // need to save image
         
         navigationController.popToRootViewControllerAnimated(true)
     }
     
-//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,10 +53,6 @@ class EditPostViewController: UIViewController, UITextFieldDelegate {
         editTitleTextField.text = post.title
         editContentTextField.text = post.content
         editPictureImageView.image = post.picture
-
-//        editUserNameTextField.delegate = self
-//        editTitleTextField.delegate = self
-//        editContentTextField.delegate = self
         
         editPictureImageView.layer.cornerRadius = editPictureImageView.frame.size.width / 2.0
         editPictureImageView.clipsToBounds = true
@@ -73,20 +67,4 @@ class EditPostViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//    }
-
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

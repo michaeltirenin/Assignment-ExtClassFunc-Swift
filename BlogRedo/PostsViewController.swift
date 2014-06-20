@@ -15,7 +15,7 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func createNewPostButton(sender: UIBarButtonItem) {
         
     }
-    
+
     var posts = Post().setPosts()
 
     override func viewDidLoad() {
@@ -76,14 +76,44 @@ class PostsViewController: UIViewController, UITableViewDataSource, UITableViewD
             let editPostVC : EditPostViewController = segue.destinationViewController as EditPostViewController
             editPostVC.editPostDelegate = self
             var indexPath : NSIndexPath = postsTableView.indexPathForSelectedRow()
-            var post : Post = posts[indexPath.row]
-            editPostVC.post = post
+            var editPost : Post = posts[indexPath.row]
+            editPostVC.post = editPost
         }
     }
     
 //    func updateTable() {
-//        postsTableView.reloadData()
+//
 //    }
+    
+    func addObject(createPost: Post) {
+        posts.append(createPost)
+        postsTableView.reloadData()
+        dismissModalViewControllerAnimated(true)
+    }
+
+// Override to support editing the table view.
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    // Delete the row from the data source
+//    [_posts removeObjectAtIndex:indexPath.row];
+//    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+//    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+//    }
+//}
+    
+    // editing the table view in main view (deleting entire post)
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            // delete the row from the data source
+//            posts.removeAtIndex(indexPath.row)
+//            posts.removeObjectAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            
+        } else if editingStyle == UITableViewCellEditingStyle.Insert {
+            // create a new instance ... haven't gotten this far
+        }
+    }
+
 }
-
-

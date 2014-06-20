@@ -9,56 +9,59 @@
 import UIKit
 
 protocol CreatePostViewControllerDelegate {
-//    func
+    func addObject(createPost: Post)
 }
 
 class CreatePostViewController: UIViewController, UITextFieldDelegate {
     
     var createPostDelegate : CreatePostViewControllerDelegate? = nil
 
-    @IBOutlet var userNameTextField : UITextField
-    @IBOutlet var titleTextField : UITextField
-    @IBOutlet var contentTextField : UITextField
+//    init(delegate: CreatePostViewControllerDelegate?) {
+//        self.createPostDelegate = delegate
+//    }
+
+    var post = Post()
+    var createTimeStamp = Post().stringFromDate()
+
+    @IBOutlet var createUserNameTextField : UITextField
+    @IBOutlet var createTitleTextField : UITextField
+    @IBOutlet var createContentTextField : UITextField
     @IBOutlet var createPictureImageView : UIImageView
+    @IBOutlet var createPostNavigationBar: UINavigationBar
     
     @IBAction func cancelNewPostButton(sender: UIBarButtonItem) {
-        navigationController.popToRootViewControllerAnimated(true)
+        dismissModalViewControllerAnimated(true)
     }
     
     @IBAction func saveNewPostButton(sender: UIBarButtonItem) {
+        post.userName = createUserNameTextField.text
+        post.title = createTitleTextField.text
+        post.content = createContentTextField.text
+        post.picture = createPictureImageView.image
+        post.timeStamp = createTimeStamp
         
+        // add save image to library
+        
+        createUserNameTextField.resignFirstResponder() // resigns keyboard before VC
+        createTitleTextField.resignFirstResponder()  // resigns keyboard before VC
+        createContentTextField.resignFirstResponder()  // resigns keyboard before VC
+        
+        createPostDelegate!.addObject(post)
     }
-
-//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Create New Post"
-
+        createPostNavigationBar.topItem.title = "Create New Post"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    // UITextFieldDelegate
+    // UITextFieldDelegate; also, note: link delegate for each textfield in storyboard
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
